@@ -1,0 +1,47 @@
+{
+  "name": "@wiest-digital/daybook-client",
+  "version": "0.1.0",
+  "description": "Client SDK for the Daybook content API: typed content fetching, lead submission, and a canonical prose stylesheet for building websites backed by Daybook.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./prose.css": "./styles/prose.css"
+  },
+  "files": [
+    "dist",
+    "styles",
+    "src"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wiest-Digital/daybook-client.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

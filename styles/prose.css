@@ -1,0 +1,112 @@
+/*
+ * Canonical stylesheet for Daybook CMS-delivered HTML (blog bodies, gallery
+ * descriptions, content blocks). The CMS delivers allowlist-sanitized markup:
+ * p, h2, h3, strong, em, s, ul, ol, li, blockquote, a, img, hr, code, pre.
+ *
+ * Modern CSS resets (Tailwind Preflight, etc.) strip heading sizes and list
+ * markers, so raw CMS HTML renders as undifferentiated text — the exact class
+ * of bug this file exists to prevent. These rules restore *structure* only,
+ * using em units + currentColor so they inherit each site's font, size, and
+ * color. Layer brand tweaks on top (e.g. a serif heading font, an accent
+ * blockquote border); don't fork the structure.
+ *
+ * Usage: add `class="daybook-prose"` to the element you `set:html` into, and
+ * `import '@wiest-digital/daybook-client/prose.css'` once in the site.
+ */
+
+.daybook-prose {
+  line-height: 1.65;
+}
+
+.daybook-prose > :first-child {
+  margin-top: 0;
+}
+.daybook-prose > :last-child {
+  margin-bottom: 0;
+}
+
+.daybook-prose p {
+  margin: 0.75em 0;
+}
+
+.daybook-prose h2 {
+  margin: 1.4em 0 0.5em;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.daybook-prose h3 {
+  margin: 1.2em 0 0.4em;
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.daybook-prose ul,
+.daybook-prose ol {
+  margin: 0.75em 0;
+  padding-left: 1.4em;
+}
+.daybook-prose ul {
+  list-style: disc;
+}
+.daybook-prose ol {
+  list-style: decimal;
+}
+.daybook-prose li {
+  margin: 0.3em 0;
+}
+.daybook-prose li > ul,
+.daybook-prose li > ol {
+  margin: 0.3em 0;
+}
+
+.daybook-prose blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid currentColor;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.daybook-prose a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.daybook-prose img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+.daybook-prose hr {
+  margin: 1.75em 0;
+  border: 0;
+  border-top: 1px solid currentColor;
+  opacity: 0.25;
+}
+
+.daybook-prose strong {
+  font-weight: 700;
+}
+.daybook-prose em {
+  font-style: italic;
+}
+.daybook-prose s {
+  text-decoration: line-through;
+}
+
+.daybook-prose code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+.daybook-prose pre {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  overflow-x: auto;
+}
+.daybook-prose pre code {
+  font-size: 0.85em;
+}
