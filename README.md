@@ -99,7 +99,7 @@ await submitLead(config, { form: await request.formData(), sourceUrl: referer })
 2. `npm login` as a member of that org.
 3. `npm publish` — `publishConfig.access` is already `public`; `prepublishOnly`
    rebuilds `dist`.
-4. Bump each consuming site off the git dep: `npm i @wiest-digital/daybook-client@^0.1.0`.
+4. Bump each consuming site off the git dep: `npm i @wiest-digital/daybook-client@^0.1.1`.
 
 ## Develop
 

@@ -1,6 +1,6 @@
 {
   "name": "@wiest-digital/daybook-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Client SDK for the Daybook content API: typed content fetching, lead submission, and a canonical prose stylesheet for building websites backed by Daybook.",
   "license": "UNLICENSED",
   "type": "module",
