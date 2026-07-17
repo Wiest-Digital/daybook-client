@@ -22,13 +22,11 @@ typed, validated data; you own the design.
 
 ## Install
 
-Until it's on npm, install from the repo:
-
 ```bash
-npm i github:Wiest-Digital/daybook-client
+npm i @wiest-digital/daybook-client
 ```
 
-Once published: `npm i @wiest-digital/daybook-client`.
+Or without npm, straight from the repo: `npm i github:Wiest-Digital/daybook-client#v0.1.1`.
 
 ## Content
 
@@ -81,7 +79,11 @@ await submitLead(config, { form: await request.formData(), sourceUrl: referer })
 
 ## New-site checklist
 
-1. `npm i github:Wiest-Digital/daybook-client` (or the npm version).
+> Site/developer side only. The full operator runbook — create the tenant in the
+> CRM admin, wire domains + tokens, enable content features, go live — is
+> `docs/onboard-new-tenant.md` in the `wiest-digital-crm` repo.
+
+1. `npm i @wiest-digital/daybook-client` (or `github:Wiest-Digital/daybook-client#v0.1.1` without npm).
 2. Set env vars in the Vercel project (**Production** scope; preview won't have them):
    - `CONTENT_API_URL` — `https://<tenant-dashboard>/api/content`
    - `CONTENT_API_TOKEN` — the tenant's content token (from the CRM admin → client)
